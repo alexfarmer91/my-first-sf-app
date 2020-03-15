@@ -1,7 +1,10 @@
 <template>
     <div class="list">
         <template for:each={sessions} for:item="session" for:index="index">
-            <p key={session.id}>{session.name}</p>
+            <!-- <p key={session.id}>{session.name}</p> -->
+            <a key={session.id} class="session" data-index={index} onclick={handleSessionClick}>
+                <p key={session.id}>{session.name}</p>
+            </a>
         </template>
     </div>
 </template>
